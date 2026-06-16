@@ -1,16 +1,88 @@
-# React + Vite
+# Guess the Number Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun number guessing game built with React and Vite.
 
-Currently, two official plugins are available:
+## About
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This is a beginner-friendly React project to practice:
+- React components and state management
+- User input handling
+- Conditional logic
+- Game mechanics and feedback
+- React hooks (useState)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Guess a random number between 1 and 100
+- Get feedback if your guess is too high or too low
+- Track the number of attempts
+- Reset the game and play again
+- Simple and interactive UI
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite (build tool)
+- CSS for styling
+
+## Getting Started
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run the development server
+
+```bash
+npm run dev
+```
+
+The app will be available at `http://localhost:5173` (or another port if 5173 is in use).
+
+### Build for production
+
+```bash
+npm run build
+```
+
+## Project Structure
+
+```
+src/
+├── App.jsx       - Main game component
+├── App.css       - Styling
+├── main.jsx      - Entry point
+├── index.css     - Global styles
+└── assets/       - Images and other assets
+```
+
+## How to Play
+
+1. The game generates a random number between 1 and 100
+2. Enter your guess in the input field
+3. Get feedback:
+   - "Too high" if your guess is higher than the number
+   - "Too low" if your guess is lower than the number
+   - "You got it!" if you guess correctly
+4. The game tracks how many attempts you took
+5. Play again by clicking the reset button
+
+## Learning Goals
+
+- Use useState hook for state management
+- Handle form input and button clicks
+- Implement conditional rendering
+- Build game logic
+- Style React components with CSS
+- Improve debugging skills
+
+## Future Improvements
+
+- Add difficulty levels (different number ranges)
+- Add a timer for speed challenges
+- Implement a hint system
+- Add animations and sound effects
+- Track and display best score
+- Responsive design for mobile
