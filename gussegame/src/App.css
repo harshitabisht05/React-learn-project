@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Poppins", sans-serif;
+
+  background: linear-gradient(
+    135deg,
+    #6f4499 0%,
+    #4e3f5d 100%
+  );
+}
+
+.page-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.game-container {
+  width: 90%;
+  max-width: 500px;
+
+  padding: 2rem;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: rgb(34, 9, 59);
+  margin-bottom: 10px;
+}
+
+.game-container p {
+  color: rgb(232, 210, 255);
+  margin: 12px 0;
+  font-size: 1rem;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+
+  margin-top: 20px;
+
+  border: none;
+  border-radius: 12px;
+
+  outline: none;
+
+  font-size: 1rem;
+  text-align: center;
+
+  background: rgba(244, 218, 255, 0.9);
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px 24px;
+
+  border: none;
+  border-radius: 12px;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+button:first-of-type {
+  background: #673586;
+  color: white;
+}
+
+button:first-of-type:hover {
+  box-shadow: 0 10px 20px rgba(197, 104, 255, 0.4);
+}
+
+button:last-of-type {
+  background: white;
+  color: #a546e5;
+}
+
+button:last-of-type:hover {
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+}
+
+button:disabled,
+input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.message {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.attempts {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.range {
+  margin-top: 15px;
+  padding: 10px;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.popup {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  min-width: 320px;
+  animation: popupAnimation 0.4s ease;
+}
+
+.popup h2 {
+  color: #c363ff;
+  margin-bottom: 10px;
+}
+
+.popup p {
+  color: #333;
+  margin: 10px 0;
+}
+
+.popup button {
+  margin-top: 15px;
+  padding: 12px 24px;
+
+  border: none;
+  border-radius: 12px;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+@keyframes popupAnimation {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
