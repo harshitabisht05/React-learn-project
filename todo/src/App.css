@@ -1,0 +1,239 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+body { 
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background: #858585 
+}
+
+.todo-container {
+  background: linear-gradient(135deg, #cecdcd 0%, #a6a6a6 100%);
+  width: 100%;
+  max-width: 500px;
+  padding: 2.5rem;
+  border-radius: 20px;
+  overflow: hidden;
+  max-height: 90vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.5);
+}
+
+.todo-container h1 {
+  color: #000000;
+  text-align: center;
+  margin: 0 0 1.5rem 0;
+  font-size: 2rem;
+}
+
+.todo-container p {
+  color: #666;
+  font-weight: 600;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.25rem;
+  align-items: center;
+  width: 100%;
+}
+
+.input-section input {
+  flex: 1;
+  height: 44px;
+  padding: 0 14px;
+  border: 1px solid #e6e6e9;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: box-shadow 0.18s ease, border-color 0.18s ease;
+  background: #fff;
+  color: #222;
+}
+
+.input-section input::placeholder {
+  color: #b7bac0;
+}
+
+.input-section input:focus {
+  outline: none;
+  border-color: rgba(105, 105, 105, 0.9);
+  box-shadow: 0 8px 20px rgba(102,126,234,0.12);
+}
+
+.input-section button {
+  height: 44px;
+  padding: 0 18px;
+  background:#000000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-section button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(57, 57, 57, 0.314);
+}
+
+.input-section button:active {
+  transform: translateY(0);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-top: 10px;
+  background: linear-gradient(135deg, #f5f7ff 0%, #f0f2ff 100%);
+  border-radius: 12px;
+  border-left: 4px solid #424242;
+  transition: all 0.3s ease;
+}
+
+.task-item:hover {
+  background: #999999;
+  box-shadow: 0 5px 15px rgba(59, 59, 59, 0.37);
+  transform: translateX(2px);
+}
+
+.task-item span {
+  flex: 1;
+  font-size: 1rem;
+  color: #333;
+  word-break: break-word;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #999;
+  opacity: 0.7;
+}
+
+.task-item button {
+  padding: 8px 14px;
+  margin-left: 8px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.task-item button:first-of-type {
+  background: #eeeeee;
+  color: #000000;
+}
+
+.task-item button:first-of-type:hover {
+  background: #d2d2d2;
+  transform: scale(1.05);
+}
+
+.task-item button:last-of-type {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.task-item button:last-of-type:hover {
+  background: #d2d2d2;
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .todo-container {
+    padding: 1.25rem;
+    border-radius: 16px;
+    max-width: 95%;
+  }
+
+  .todo-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .input-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .input-section input {
+    width: 100%;
+    padding: 10px 12px;
+  }
+
+  .input-section button {
+    width: 100%;
+    padding: 10px 12px;
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    border-left-width: 3px;
+    padding-left: 10px;
+    margin-top: 8px;
+  }
+
+  .task-item button {
+    width: 100%;
+    margin-left: 0;
+    padding: 8px 10px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Extra small phones tweaks */
+@media (max-width: 380px) {
+  .todo-container {
+    padding: 0.9rem;
+    border-radius: 12px;
+  }
+
+  .todo-container h1 {
+    font-size: 1.25rem;
+  }
+
+  ul {
+    padding-left: 0.5rem;
+  }
+
+  .task-item {
+    border-left: none;
+    padding-left: 0.75rem;
+  }
+
+  .task-item:hover {
+    transform: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  }
+
+  .input-section button {
+    padding: 9px 10px;
+    font-size: 0.95rem;
+  }
+}
