@@ -1,4 +1,4 @@
-# Games Repo
+# React Learn Projects
 
 I am learning React and I will be creating small projects using React.
 
